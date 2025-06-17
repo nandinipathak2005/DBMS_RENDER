@@ -23,6 +23,15 @@
 // });
 
 // module.exports = authDB;
+// server/your-db-config-file.js (or wherever you define authDB)
+require('dotenv').config({ path: '../.env' }); // Adjust path if needed
+
+// If your authDB.js file is directly inside 'server',
+// then it's just require('dotenv').config();
+// because it will be relative to the cwd where the server starts.
+
+// Let's assume your Sequelize setup file is directly inside 'server'.
+// Then you can use:
 require('dotenv').config();
 
 const { Sequelize } = require('sequelize');
