@@ -64,7 +64,8 @@ const authController = {
 module.exports = authController;
 */
 // backend/controllers/authController.js
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
+
 const User = require('../models/User'); // Adjust the path if necessary
 
 const authController = {
